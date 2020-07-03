@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".HomeActivity">
+
+    <com.rihansr.tic_tac_toe.AutoWritingText
+        android:id="@+id/appName_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/colorAppName"
+        android:text="Tic Tac Toe"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:gravity="center"
+        android:background="@drawable/bg_board"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/one_player_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:text="Single Player"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:fontFamily="serif-monospace"
+            android:onClick="Select_Option"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/two_players_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:text="Multi Player"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:fontFamily="serif-monospace"
+            android:onClick="Select_Option"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/howToPlay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:text="How To Play"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:fontFamily="serif-monospace"
+            android:onClick="Select_Option"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/quit_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:text="Quit"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:fontFamily="serif-monospace"
+            android:onClick="Select_Option"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/sound_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="Select_Option"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/sound_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/ic_sound_on"
+                android:layout_marginBottom="2.5dp"
+                android:background="@drawable/shape_round_border"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/sound_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Sound On"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vibrate_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="Select_Option"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/vibrate_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/ic_vibration_on"
+                android:layout_marginBottom="2.5dp"
+                android:background="@drawable/shape_round_border"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/vibrate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Vibration On"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="Select_Option"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/share_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginBottom="2.5dp"
+                android:src="@drawable/ic_share"
+                android:background="@drawable/shape_round_border"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/share_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Share App"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

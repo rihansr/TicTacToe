@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="resume_Game_msg">Do you want to resume your existing game or start a new game?</string>
+    <string name="resume_game">Resume Game</string>
+    <string name="new_game">New Game</string>
+    <string name="share">Share</string>
+    <string name="draw_msg">It\'s a tie, play again!</string>
+    <string name="network_Error">Network error. Please retry when network is stable.</string>
+
+    <string name="HowToPlay">
+       [1]\nThe game is played on a grid that\'s 3 squares by 3 squares.
+       \n\n[2]\nYou are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.
+       \n\n[3]\nThe first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
+       \n\n[4]\nWhen all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

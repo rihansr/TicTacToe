@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#330501</color>
+    <color name="colorPrimaryDark">#330501</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAppName">#ffffff</color>
+    <color name="colorView">#c8330501</color>
+    <color name="colorCross">#f2f2f2</color>
+    <color name="colorZero">#f2f2f2</color>
+    <color name="colorTimer">#15e182</color>
+    <color name="colorTransparent">#00ffffff</color>
+</resources>

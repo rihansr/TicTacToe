@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".HomeActivity">
+
+   <LinearLayout
+       android:id="@+id/dialog_layout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/bg_board"
+       android:padding="15dp"
+       android:gravity="center"
+       android:orientation="vertical"
+       tools:ignore="UselessParent">
+
+       <TextView
+           android:id="@+id/draw_icon"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           android:gravity="center_horizontal"
+           android:layout_marginBottom="10dp"
+           android:text="XO"
+           android:textColor="@android:color/white"
+           android:textStyle="bold"
+           android:textSize="48sp"
+           tools:ignore="HardcodedText"/>
+
+       <ImageView
+           android:id="@+id/mood_icon"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="10dp"
+           android:visibility="gone"
+           android:src="@drawable/ic_mood_bad"
+           tools:ignore="ContentDescription" />
+
+       <RelativeLayout
+           android:id="@+id/star_layout"
+           android:layout_width="match_parent"
+           android:layout_height="70dp"
+           android:orientation="horizontal"
+           android:layout_marginBottom="10dp"
+           android:visibility="gone"
+           android:gravity="center_horizontal">
+
+           <ImageButton
+               android:id="@+id/star_one"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:background="@android:color/transparent"
+               android:src="@drawable/ic_star_small"
+               tools:ignore="ContentDescription" />
+
+           <ImageButton
+               android:id="@+id/star_two"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentTop="true"
+               android:layout_toEndOf="@+id/star_one"
+               android:background="@android:color/transparent"
+               android:src="@drawable/ic_star_large"
+               tools:ignore="ContentDescription" />
+
+           <ImageButton
+               android:id="@+id/star_three"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toEndOf="@+id/star_two"
+               android:layout_alignParentBottom="true"
+               android:background="@android:color/transparent"
+               android:src="@drawable/ic_star_small"
+               tools:ignore="ContentDescription" />
+
+       </RelativeLayout>
+
+       <TextView
+           android:id="@+id/message"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:layout_marginBottom="20dp"
+           android:textColor="@android:color/white"
+           android:textStyle="bold"
+           android:textSize="18sp"
+           android:fontFamily="serif-monospace"
+           tools:ignore="HardcodedText"/>
+
+       <Button
+           android:id="@+id/share"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/shape_button"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+           android:text="@string/share"
+           android:textAllCaps="false"
+           android:textColor="@android:color/white"
+           android:textStyle="bold"
+           android:textSize="22.5sp"
+           android:fontFamily="serif-monospace"
+           tools:ignore="ButtonStyle" />
+
+       <Button
+           android:id="@+id/new_game"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/shape_button"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:text="@string/new_game"
+           android:textAllCaps="false"
+           android:textColor="@android:color/white"
+           android:textStyle="bold"
+           android:textSize="22.5sp"
+           android:fontFamily="serif-monospace"
+           tools:ignore="ButtonStyle" />
+
+   </LinearLayout>
+
+</LinearLayout>

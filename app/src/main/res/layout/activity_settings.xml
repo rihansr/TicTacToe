@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".SettingsActivity">
+
+    <com.rihansr.tic_tac_toe.AutoWritingText
+        android:id="@+id/appName_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/colorAppName"
+        android:text="Tic Tac Toe"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:background="@drawable/bg_board"
+        android:layout_centerInParent="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12.75dp"
+            android:gravity="center"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/player_one_name"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Player One"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText,NestedWeights" />
+
+                    <EditText
+                        android:id="@+id/player_one_etxt"
+                        android:layout_weight="2.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:textCursorDrawable="@color/colorTimer"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="Nickname"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:maxLength="10"
+                        android:background="@drawable/shape_roundrect"
+                        android:inputType="textCapWords"
+                        tools:ignore="HardcodedText,TextFields" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:scrollbars="none"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_one"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_one"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_two"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_two"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_three"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_three"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_four"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_four"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_five"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_five"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_six"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_six"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_seven"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_seven"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_one_avator_eight"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:src="@drawable/avatar_eight"
+                            android:onClick="Choose_Avatar_One"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/player_two_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="visible"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/player_two_name"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Player Two"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText,NestedWeights" />
+
+                    <EditText
+                        android:id="@+id/player_two_etxt"
+                        android:layout_weight="2.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:textCursorDrawable="@color/colorTimer"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="Nickname"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:maxLength="10"
+                        android:inputType="textCapWords"
+                        android:background="@drawable/shape_roundrect"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/player_two_avatar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_one"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_one"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_two"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_two"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_three"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_three"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_four"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_four"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_five"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_five"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_six"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_six"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_seven"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/avatar_seven"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/p_two_avator_eight"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="5dp"
+                            android:src="@drawable/avatar_eight"
+                            android:onClick="Choose_Avatar_Two"
+                            android:background="@drawable/shape_avatar_unselect"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/first_move_tv"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="First Move"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText,NestedWeights" />
+
+                    <LinearLayout
+                        android:layout_weight="2.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/move_cross"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_marginEnd="10dp"
+                            android:text="X"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/shape_button_uncheck"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:onClick="Choose_First_Move"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText,NestedWeights" />
+
+                        <TextView
+                            android:id="@+id/move_zero"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_marginEnd="10dp"
+                            android:text="O"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/shape_button_uncheck"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:onClick="Choose_First_Move"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/move_cross_zero"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:text="XO"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/shape_button_uncheck"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:onClick="Choose_First_Move"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/game_mode_tv"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="Game Mode"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText,NestedWeights" />
+
+                    <LinearLayout
+                        android:layout_weight="2.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mode_classic"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="Classic"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/shape_button_uncheck"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:onClick="Choose_Game_Mode"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText,NestedWeights" />
+
+                        <TextView
+                            android:id="@+id/mode_timer"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Timer"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/shape_button_uncheck"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:onClick="Choose_Game_Mode"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_mode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mode_easy"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:text="Easy"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_button_uncheck"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:onClick="Choose_Play_Mode"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/mode_medium"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Medium"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_button_uncheck"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:onClick="Choose_Play_Mode"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/mode_hard"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Hard"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_button_uncheck"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:onClick="Choose_Play_Mode"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="Return_Home"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/ic_home"
+                android:layout_marginBottom="2.5dp"
+                android:background="@drawable/shape_round_border"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Home"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="Start_Game"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginBottom="2.5dp"
+                android:src="@drawable/ic_play"
+                android:background="@drawable/shape_round_border"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Start Game"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

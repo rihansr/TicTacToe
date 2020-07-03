@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:innerRadiusRatio="2.5"
+    android:thickness="4dp"
+    android:useLevel="true">
+
+    <size
+        android:width="76dip"
+        android:height="76dip" />
+
+    <corners android:radius="10dp"/>
+
+    <gradient
+        android:type="sweep"
+        android:useLevel="false"
+        android:startColor="#EF2E4A"
+        android:centerColor="#8ecf00"
+        android:endColor="@color/colorTimer"
+        android:angle="0"/>
+
+</shape>
